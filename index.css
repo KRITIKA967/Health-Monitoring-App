@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:border-gray-700;
+  }
+  
+  .card {
+    @apply bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-lg shadow-xl p-6;
+  }
+
+  .gradient-card {
+    @apply bg-gradient-to-br from-white/95 to-gray-50/95 dark:from-gray-800/95 dark:to-gray-900/95;
+  }
+
+  .glass-card {
+    @apply bg-white/20 dark:bg-gray-800/20 backdrop-blur-md border border-white/10 dark:border-gray-700/10;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
